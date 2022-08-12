@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRASILEIRO</title>
+
+    <style>
+        body{
+            background-color: darkslategrey;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+   
+</head>
+<body>
+    <h1>De que país você é?</h1>
+    Em qual País que esá vivendo? <input type="text" name="txtp1" id="txtp1">
+    <input type="button" value="Verificar" onclick="analise()">
+    <div id="res">
+        <script> 
+            function analise(){
+                var pais = document.querySelector('input#txtp1')
+                var res = document.querySelector('div#res')
+                var paisC = String(pais.value)
+
+                res.innerHTML = `<p> Você está em ${paisC}</p>`
+                if(paisC == 'Brasil'){
+                    res.innerHTML += '<p>Você é Brasileiro</p>'
+                }else{
+                    res.innerHTML += `<p>Você é Estrangeiro</p>`
+                }
+            }      
+
+        </script>
+    </div>
+</body>
+</html> 
